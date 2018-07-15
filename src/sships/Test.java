@@ -1,5 +1,5 @@
 package sships;
 
 public class Test {
- var test;
+ private int test;
 }
