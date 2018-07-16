@@ -32,6 +32,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mlf4IIhPEei1FqBrffKIwA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mlf4IYhPEei1FqBrffKIwA" value="*"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_g2XmsIkHEeiXft9G9MMzyA" name="shipType" visibility="protected" type="_TCvewIkHEeiXft9G9MMzyA"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_s-dOYIhNEei1FqBrffKIwA" name="Ship"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_MFZtsIhNEei1FqBrffKIwA" name="Point">
@@ -48,16 +49,35 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0PXlVIhPEei1FqBrffKIwA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0PXlVYhPEei1FqBrffKIwA" value="*"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_uXp18IhNEei1FqBrffKIwA" name="Player"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tcdlgIj8EeiXft9G9MMzyA" name="grid" visibility="protected" type="_FeqqQIhNEei1FqBrffKIwA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_uXp18IhNEei1FqBrffKIwA" name="Player">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_hbCowIkBEeiXft9G9MMzyA" annotatedElement="_uXp18IhNEei1FqBrffKIwA">
+            <body>Initiate Grid&#xD;
+Initiate Ships - different types</body>
+          </ownedComment>
+        </ownedOperation>
       </packagedElement>
-      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_fFOQ4IhREei1FqBrffKIwA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fFQtIIhREei1FqBrffKIwA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
-        </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
-      </profileApplication>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vb-vYIj5EeiFLOEBm2qhNQ" name="Game">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_W0bwEIj5EeiFLOEBm2qhNQ" name="players" visibility="protected" type="_a1WT8IhNEei1FqBrffKIwA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i0tEAIj5EeiFLOEBm2qhNQ" value="2"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i0-w0Ij5EeiFLOEBm2qhNQ" value="2"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hneJ8Ij7EeiXft9G9MMzyA" name="Game"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_p16c8Ij5EeiFLOEBm2qhNQ" client="_Vb-vYIj5EeiFLOEBm2qhNQ" supplier="_a1WT8IhNEei1FqBrffKIwA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_X2IBIIj6EeiXft9G9MMzyA" name="BotPlayer">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Zy-IUIj6EeiXft9G9MMzyA" general="_a1WT8IhNEei1FqBrffKIwA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_cviVMIj8EeiXft9G9MMzyA" name="BotPlayer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7oveAIj8EeiXft9G9MMzyA" name="Initiate grid for player" client="_a1WT8IhNEei1FqBrffKIwA" supplier="_FeqqQIhNEei1FqBrffKIwA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_irtmcIkBEeiXft9G9MMzyA" name="Ship()" client="_a1WT8IhNEei1FqBrffKIwA" supplier="_JOqxIIhNEei1FqBrffKIwA"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_TCvewIkHEeiXft9G9MMzyA" name="ShipType">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bjafUIkHEeiXft9G9MMzyA" name="CARRIER"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_dMNpIIkHEeiXft9G9MMzyA" name="BATTLESHIP"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_wXDtYIkHEeiXft9G9MMzyA" name="ship of type" client="_JOqxIIhNEei1FqBrffKIwA" supplier="_TCvewIkHEeiXft9G9MMzyA"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_rE0WwIhOEei1FqBrffKIwA" memberEnd="_rE0Ww4hOEei1FqBrffKIwA _rFHRsIhOEei1FqBrffKIwA">
+    <packagedElement xmi:type="uml:Association" xmi:id="_rE0WwIhOEei1FqBrffKIwA" name="Grid consists of XY Points" memberEnd="_rE0Ww4hOEei1FqBrffKIwA _rFHRsIhOEei1FqBrffKIwA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rE0WwYhOEei1FqBrffKIwA" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rE0WwohOEei1FqBrffKIwA" key="nature" value="UML_Nature"/>
       </eAnnotations>
@@ -87,6 +107,18 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6_2YYIkEEeiXft9G9MMzyA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6_40oIkEEeiXft9G9MMzyA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6_9GEIkEEeiXft9G9MMzyA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6_9tIIkEEeiXft9G9MMzyA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/documentation#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_DOCUMENTATION/Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+    </profileApplication>
   </uml:Model>
   <standard:Create xmi:id="_DxycQIhOEei1FqBrffKIwA" base_BehavioralFeature="_seAMsIhNEei1FqBrffKIwA"/>
   <standard:Create xmi:id="_FFs7MIhOEei1FqBrffKIwA" base_BehavioralFeature="_s-dOYIhNEei1FqBrffKIwA"/>
@@ -94,5 +126,6 @@
   <standard:Create xmi:id="_HLrwQIhOEei1FqBrffKIwA" base_BehavioralFeature="_uXp18IhNEei1FqBrffKIwA"/>
   <PapyrusJava:Array xmi:id="_4cDLsIhQEei1FqBrffKIwA" base_property="_rE0Ww4hOEei1FqBrffKIwA"/>
   <PapyrusJava:Array xmi:id="_7sAgkIhQEei1FqBrffKIwA" definition="" base_property="_0PXlU4hPEei1FqBrffKIwA"/>
-  <PapyrusJava:Array xmi:id="_9X8d8IhQEei1FqBrffKIwA" definition="" base_property="_MlWHI4hPEei1FqBrffKIwA"/>
+  <standard:Create xmi:id="_lJamsIj7EeiXft9G9MMzyA" base_BehavioralFeature="_hneJ8Ij7EeiXft9G9MMzyA"/>
+  <standard:Create xmi:id="_g6ZzIIj8EeiXft9G9MMzyA" base_BehavioralFeature="_cviVMIj8EeiXft9G9MMzyA"/>
 </xmi:XMI>
