@@ -23,21 +23,6 @@
       <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_CJjIkIhNEei1FqBrffKIwA" name="sships">
-      <packagedElement xmi:type="uml:Package" xmi:id="_bmT5AIhcEei1FqBrffKIwA" name="DataTypes">
-        <packagedElement xmi:type="uml:Class" xmi:id="_H91hwIhVEei1FqBrffKIwA" name="ArrayList">
-          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_4Xa0QIhZEei1FqBrffKIwA" name="RedefinableTemplateSignature1" parameter="_7Bo-0IhZEei1FqBrffKIwA">
-            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_7Bo-0IhZEei1FqBrffKIwA" parameteredElement="_JOqxIIhNEei1FqBrffKIwA">
-              <default xmi:type="uml:Class" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList-_ownedElement.0-_ownedParameter.0-_ownedParameteredElement"/>
-            </ownedParameter>
-          </ownedTemplateSignature>
-        </packagedElement>
-        <packagedElement xmi:type="uml:DataType" xmi:id="_fNxPQIhZEei1FqBrffKIwA" name="T"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_AxtqkIhbEei1FqBrffKIwA" name="ArrayList">
-          <templateBinding xmi:type="uml:TemplateBinding" xmi:id="_mUdTMIhbEei1FqBrffKIwA" signature="_4Xa0QIhZEei1FqBrffKIwA">
-            <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="_sPa1wIhbEei1FqBrffKIwA" actual="_JOqxIIhNEei1FqBrffKIwA" formal="_7Bo-0IhZEei1FqBrffKIwA"/>
-          </templateBinding>
-        </packagedElement>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_FeqqQIhNEei1FqBrffKIwA" name="Grid">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_rE0Ww4hOEei1FqBrffKIwA" name="gridMap" visibility="protected" type="_MFZtsIhNEei1FqBrffKIwA" aggregation="composite" association="_rE0WwIhOEei1FqBrffKIwA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rE-HwIhOEei1FqBrffKIwA"/>
@@ -96,7 +81,44 @@ Initiate Ships - different types</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_N6hFEIklEeimCfepxqIq5w" name="Initiate Puppeteer" client="_Vb-vYIj5EeiFLOEBm2qhNQ" supplier="_tGtQwIkkEeimCfepxqIq5w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_XQeu4IklEeimCfepxqIq5w" name="Use Player who is boot" client="_tGtQwIkkEeimCfepxqIq5w" supplier="_a1WT8IhNEei1FqBrffKIwA"/>
-      <packagedElement xmi:type="uml:Activity" xmi:id="_LmfiEIknEeimCfepxqIq5w" name="Activity15"/>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_LmfiEIknEeimCfepxqIq5w" name="Game_initialization" node="_1KOkYImqEei6_fPHVEWKkA _9fLigIm9Eei6_fPHVEWKkA _lOSVAIm-Eei6_fPHVEWKkA" group="_Z5q4EIm8Eei6_fPHVEWKkA _dW2esIm-Eei6_fPHVEWKkA _iCCbcIm-Eei6_fPHVEWKkA">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_2sTxcInGEei6_fPHVEWKkA" target="_lOSVAIm-Eei6_fPHVEWKkA" source="_9fLigIm9Eei6_fPHVEWKkA"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_Z5q4EIm8Eei6_fPHVEWKkA" name="Game" node="_9fLigIm9Eei6_fPHVEWKkA" represents="_Vb-vYIj5EeiFLOEBm2qhNQ"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_dW2esIm-Eei6_fPHVEWKkA" name="Puppeteer" node="_lOSVAIm-Eei6_fPHVEWKkA"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_iCCbcIm-Eei6_fPHVEWKkA" name="Player"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_1KOkYImqEei6_fPHVEWKkA" name="Game initiated"/>
+        <node xmi:type="uml:UnmarshallAction" xmi:id="_9fLigIm9Eei6_fPHVEWKkA" name="Game()" outgoing="_2sTxcInGEei6_fPHVEWKkA" inPartition="_Z5q4EIm8Eei6_fPHVEWKkA"/>
+        <node xmi:type="uml:UnmarshallAction" xmi:id="_lOSVAIm-Eei6_fPHVEWKkA" name="Puppeteer()" incoming="_2sTxcInGEei6_fPHVEWKkA" inPartition="_dW2esIm-Eei6_fPHVEWKkA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_JFeDQImJEei6_fPHVEWKkA" name="DataTypes">
+        <packagedElement xmi:type="uml:Class" xmi:id="_H91hwIhVEei1FqBrffKIwA" name="ArrayList">
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_4Xa0QIhZEei1FqBrffKIwA" name="RedefinableTemplateSignature1" parameter="_7Bo-0IhZEei1FqBrffKIwA">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_7Bo-0IhZEei1FqBrffKIwA" parameteredElement="_JOqxIIhNEei1FqBrffKIwA">
+              <default xmi:type="uml:Class" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList-_ownedElement.0-_ownedParameter.0-_ownedParameteredElement"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_fNxPQIhZEei1FqBrffKIwA" name="T" templateParameter="_go4qQImJEei6_fPHVEWKkA"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_AxtqkIhbEei1FqBrffKIwA" name="ArrayList">
+          <templateBinding xmi:type="uml:TemplateBinding" xmi:id="_ic9P8ImJEei6_fPHVEWKkA" signature="_4Xa0QIhZEei1FqBrffKIwA">
+            <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="_nPApsImJEei6_fPHVEWKkA" actual="_JOqxIIhNEei1FqBrffKIwA" formal="_go4qQImJEei6_fPHVEWKkA"/>
+          </templateBinding>
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_bS2ZsImJEei6_fPHVEWKkA" name="T" parameter="_go4qQImJEei6_fPHVEWKkA">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_go4qQImJEei6_fPHVEWKkA" default="_fNxPQIhZEei1FqBrffKIwA" parameteredElement="_fNxPQIhZEei1FqBrffKIwA"/>
+          </ownedTemplateSignature>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_1xEFcImrEei6_fPHVEWKkA" name="Interaction16">
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_4zQrIImrEei6_fPHVEWKkA" name="Game start"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_9NI1cImrEei6_fPHVEWKkA" name="Activity17" node="_MatL0ImsEei6_fPHVEWKkA _zvBM0Im5Eei6_fPHVEWKkA">
+        <node xmi:type="uml:InitialNode" xmi:id="_MatL0ImsEei6_fPHVEWKkA" name="Game()"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_zvBM0Im5Eei6_fPHVEWKkA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RQ1Pcom7Eei6_fPHVEWKkA" source="org.eclipse.papyrus.uml.diagram.interactionoverview.callbehavioraction">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RQ1Pc4m7Eei6_fPHVEWKkA" key="type" value="snapshot"/>
+          </eAnnotations>
+        </node>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_rE0WwIhOEei1FqBrffKIwA" name="Grid consists of XY Points" memberEnd="_rE0Ww4hOEei1FqBrffKIwA _rFHRsIhOEei1FqBrffKIwA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rE0WwYhOEei1FqBrffKIwA" source="org.eclipse.papyrus">
@@ -154,4 +176,5 @@ Initiate Ships - different types</body>
   <PapyrusJava:Array xmi:id="_4cDLsIhQEei1FqBrffKIwA" base_property="_rE0Ww4hOEei1FqBrffKIwA"/>
   <PapyrusJava:Array xmi:id="_7sAgkIhQEei1FqBrffKIwA" definition="" base_property="_0PXlU4hPEei1FqBrffKIwA"/>
   <standard:Create xmi:id="_lJamsIj7EeiXft9G9MMzyA" base_BehavioralFeature="_hneJ8Ij7EeiXft9G9MMzyA"/>
+  <PapyrusJava:Template xmi:id="_rI3QIImJEei6_fPHVEWKkA" base_class="_AxtqkIhbEei1FqBrffKIwA"/>
 </xmi:XMI>
